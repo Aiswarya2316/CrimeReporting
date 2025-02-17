@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Advocate Bookings</title>
+  <title>Advocate Bookings - Justice-Link</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -10,10 +10,8 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: rgb(81, 35, 35);
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     .navbar {
@@ -50,9 +48,10 @@
     }
 
     .card {
-      border: 2px solid #ffcc00;
+      border: none;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
     }
 
@@ -61,99 +60,149 @@
     }
 
     .card-title {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: bold;
+      color: #212529;
     }
 
-    footer {
+    .card-text {
+      color: #555;
+    }
+
+    .footer {
       background-color: #222;
       color: #ccc;
       padding: 20px 0;
+      margin-top: 50px;
+      text-align: center;
     }
 
-    footer a {
+    .footer a {
       color: #ffc107;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
-    footer a:hover {
+    .footer a:hover {
+      color: #ffcc00;
       text-decoration: underline;
     }
 
-    footer .social-icons i {
+    .social-icons i {
       font-size: 1.5rem;
       margin: 0 10px;
+      color: #ffcc00;
+    }
+
+    .social-icons a:hover i {
+      color: #fff;
+    }
+
+    .hero-section {
+      background-color: #212529;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffcc00;
+      margin-bottom: 30px;
+    }
+
+    .section-title p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .container {
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
- <!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a href="../clienthome" class="logo d-flex align-items-center">
-      <img src="static/1000_F_153564985_MLVK4XbezrFZnuAg5mlncjcQp82GaNcn.jpg" class="rounded-circle me-2" alt="logo" width="50px">
-      <!-- <span class="fw-bold text-white">AdvocateBooking</span> -->
-    </a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a href="../clienthome" class="logo d-flex align-items-center">
+        <img src="../static/channels4_profile.jpg" class="rounded-circle me-2" alt="logo" width="50px">
+      </a>
 
-    <!-- Toggler Button for Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Toggler Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <!-- Navigation Links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="../clientprofile">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../viewadvocates">View Advocates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../bookings">Advocate Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-danger" href="../logout">Logout</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../clientprofile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../viewadvocates">View Officers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../bookings">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="../logout">Logout</a>
+          </li>
+        </ul>
 
-      <!-- Social Media Icons -->
-      <ul class="navbar-nav d-flex align-items-center">
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://facebook.com" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://instagram.com" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
+        <!-- Social Media Icons -->
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
 
-      <!-- Search Form -->
-      <form class="d-flex">
-        <input class="form-control me-2 border-warning" type="text" placeholder="Search">
-        <button class="btn btn-warning" type="button">Search</button>
-      </form>
+        <!-- Search Form -->
+        <form class="d-flex">
+          <input class="form-control me-2 border-warning" type="text" placeholder="Search">
+          <button class="btn btn-warning" type="button">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Welcome to Your Advocate Booking</h1>
+    <p>Find and book experienced advocates for your legal needs.</p>
+  </section>
 
-  <h4 class="text-center mt-4"><b>Your Bookings</b></h4>
-
+  <!-- Your Bookings -->
   <div class="container my-5">
+    <h4 class="text-center mb-4"><strong>Your Bookings</strong></h4>
     <div class="row g-4">
       {% for i in cases %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
@@ -168,9 +217,10 @@
     </div>
   </div>
 
-  <footer class="text-center">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <p>@ 2024 Justice-Link. All Rights Reserved.</p>
+      <p>&copy; 2024 Justice-Link. All Rights Reserved.</p>
       <p class="social-icons">
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

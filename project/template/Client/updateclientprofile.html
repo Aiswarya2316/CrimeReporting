@@ -9,22 +9,26 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('static/istockphoto-1401548921-612x612.jpg'); 
+      /* background-image: url('static/istockphoto-1401548921-612x612.jpg'); */
       background-size: cover;
       background-position: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       font-family: 'Arial', sans-serif;
+      color: #333;
     }
 
     .navbar {
       background-color: #212529;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .navbar .nav-link {
       color: #ffffff;
       position: relative;
+      font-size: 16px;
+      font-weight: 500;
     }
 
     .navbar .nav-link:hover::after {
@@ -42,21 +46,23 @@
       justify-content: center;
       align-items: center;
       flex-grow: 1;
-      padding: 20px;
+      padding: 40px 0;
     }
 
     .card {
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
-      padding: 30px;
+      padding: 40px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 400px;
+      max-width: 450px;
       width: 100%;
     }
 
     h3 {
       color: #333;
       margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
     }
 
     label {
@@ -68,20 +74,27 @@
 
     input[type="text"], input[type="number"] {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
+      padding: 12px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus, input[type="number"]:focus {
+      border-color: #007bff;
+      outline: none;
     }
 
     .btn-secondary {
       background-color: #007bff;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       width: 100%;
       border: none;
       border-radius: 5px;
       font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
     .btn-secondary:hover {
@@ -89,79 +102,78 @@
     }
 
     .alert {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     @media (max-width: 768px) {
       .card {
-        padding: 20px;
+        padding: 30px;
       }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a href="../clienthome" class="logo d-flex align-items-center">
-      <img src="static/1000_F_153564985_MLVK4XbezrFZnuAg5mlncjcQp82GaNcn.jpg" class="rounded-circle me-2" alt="logo" width="50px">
-      <!-- <span class="fw-bold text-white">AdvocateBooking</span> -->
-    </a>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a href="../clienthome" class="logo d-flex align-items-center">
+        <img src="../static/channels4_profile.jpg" class="rounded-circle me-2" alt="logo" width="50px">
+      </a>
 
-    <!-- Toggler Button for Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Toggler Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <!-- Navigation Links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="../clientprofile">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../viewadvocates">View Advocates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../bookings">Advocate Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-danger" href="../logout">Logout</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../clientprofile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../viewadvocates">View Officers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../bookings">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="../logout">Logout</a>
+          </li>
+        </ul>
 
-      <!-- Social Media Icons -->
-      <ul class="navbar-nav d-flex align-items-center">
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://facebook.com" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="https://instagram.com" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
+        <!-- Social Media Icons -->
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
 
-      <!-- Search Form -->
-      <form class="d-flex">
-        <input class="form-control me-2 border-warning" type="text" placeholder="Search">
-        <button class="btn btn-warning" type="button">Search</button>
-      </form>
+        <!-- Search Form -->
+        <form class="d-flex">
+          <input class="form-control me-2 border-warning" type="text" placeholder="Search">
+          <button class="btn btn-warning" type="button">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- Form Container -->
   <div class="form-container">
@@ -169,24 +181,31 @@
       <form action="" method="post">
         {% csrf_token %}
         <h3>Update Your Details</h3>
+
+        <!-- Name Field -->
         <label for="username">Name</label>
         <input type="text" name="username" value="{{ data.username }}" placeholder="Enter your name" required>
 
+        <!-- Phone Number Field -->
         <label for="phonenumber">Phone Number</label>
         <input type="number" name="phonenumber" value="{{ data.phonenumber }}" placeholder="Enter your phone number" required>
 
+        <!-- Location Field -->
         <label for="location">Location</label>
         <input type="text" name="location" value="{{ data.location }}" placeholder="Enter your location" required>
 
+        <!-- Error Message -->
         {% if error_message %}
         <div class="alert alert-danger">
           {{ error_message }}
         </div>
         {% endif %}
 
-        <button type="submit" class="btn-secondary">Submit</button>
+        <!-- Submit Button -->
+        <button type="submit" class="btn-secondary">Update Information</button>
       </form>
     </div>
   </div>
+
 </body>
 </html>

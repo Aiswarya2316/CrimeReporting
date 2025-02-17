@@ -13,7 +13,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-image: url('static/legal-law-concept-image-scales-justice-golden-light-legal-law-concept-image-scales-justice-golden-light-background-116766827.webp');
       background-size: cover;
       background-position: center;
@@ -22,142 +22,157 @@
     }
 
     body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8); /* Shadow effect */
-  z-index: -1; /* Keeps it behind the content */
-}
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Darker overlay for better readability */
+      z-index: -1;
+    }
 
-   /* Navbar */
-.navbar {
-  background-color: #212529; /* Dark background */
-  font-family: 'Arial', sans-serif;
-}
+    /* Navbar */
+    .navbar {
+      background-color: #2c3e50; /* Professional dark background */
+      font-family: 'Arial', sans-serif;
+    }
 
-/* Navigation Links */
-.navbar .nav-link {
-  color: #ffffff; /* White text */
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
+    /* Navigation Links */
+    .navbar .nav-link {
+      color: #ecf0f1; /* Lighter text */
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
 
-.navbar .nav-link:hover {
-  color: #ffffff; /* Keep the text white on hover */
-}
+    .navbar .nav-link:hover {
+      color: #f39c12; /* Yellow highlight */
+    }
 
-.navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #ffcc00; /* Yellow glow effect */
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease-in-out;
-}
+    .navbar .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f39c12;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s ease-in-out;
+    }
 
-.navbar .nav-link:hover::after {
-  width: 100%; /* Full underline on hover */
-}
+    .navbar .nav-link:hover::after {
+      width: 100%; /* Full underline effect */
+    }
 
-/* Social Media Icons */
-.navbar .nav-item i {
-  font-size: 1.2rem;
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
+    .navbar .nav-item i {
+      font-size: 1.5rem;
+      color: #ecf0f1;
+      transition: color 0.3s ease;
+    }
 
-.navbar .nav-item i:hover {
-  color: #ffcc00; /* Yellow glow on hover */
-}
+    .navbar .nav-item i:hover {
+      color: #f39c12; /* Yellow glow on hover */
+    }
 
-.navbar .nav-item a:hover {
-  color: #ffcc00; /* Yellow glow on hover */
-}
-/* Search Form */
-.navbar .form-control {
-  border-radius: 20px;
-  padding: 8px 16px;
-  transition: box-shadow 0.3s ease;
-}
+    /* Search Form */
+    .navbar .form-control {
+      border-radius: 20px;
+      padding: 8px 16px;
+      transition: box-shadow 0.3s ease;
+    }
 
-.navbar .form-control:focus {
-  box-shadow: 0 0 8px #ffcc00;
-  border: 1px solid #ffcc00;
-}
+    .navbar .form-control:focus {
+      box-shadow: 0 0 8px #f39c12;
+      border: 1px solid #f39c12;
+    }
 
     .hero-section {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 100px 20px;
+      background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+      padding: 120px 20px;
       text-align: center;
     }
 
     .hero-section h1 {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: #ecf0f1;
     }
 
     .hero-section p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      color: #ecf0f1;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 30px;
-      color: #222;
+      margin-bottom: 40px;
+      color: #34495e;
     }
 
     .section-title h2 {
       font-size: 2.5rem;
-      color: #ffc107;
-      margin-bottom: 10px;
+      color: #f39c12;
+      margin-bottom: 15px;
     }
 
     .content-box {
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
-      padding: 20px;
-      color: black;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      color: #34495e;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     .list-unstyled i {
-      color: #ffc107;
+      color: #f39c12;
       margin-right: 10px;
     }
     .list-unstyled li {
-      color: #20201f;
+      color: #34495e;
     }
 
     .cta-section {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: #2c3e50;
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .cta-section h4 {
       margin-bottom: 20px;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      font-weight: 600;
     }
 
     .cta-section a {
       text-transform: uppercase;
       font-weight: bold;
+      background-color: #f39c12;
+      color: #2c3e50;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-section a:hover {
+      background-color: #e67e22;
     }
 
     footer {
-      background-color: #222;
-      color: #ccc;
+      background-color: #2c3e50;
+      color: #bdc3c7;
+      padding: 30px 0;
     }
 
     footer a {
-      color: #ffc107;
+      color: #f39c12;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ecf0f1;
     }
 
     footer .table {
@@ -171,8 +186,7 @@
     <div class="container-fluid">
       <!-- Logo -->
       <a href="../clienthome" class="logo d-flex align-items-center">
-        <img src="static/1000_F_153564985_MLVK4XbezrFZnuAg5mlncjcQp82GaNcn.jpg" class="rounded-circle me-2" alt="logo" width="50px">
-        <!-- <span class="fw-bold text-white">AdvocateBooking</span> -->
+        <img src="../static/channels4_profile.jpg" class="rounded-circle me-2" alt="logo" width="50px">
       </a>
   
       <!-- Toggler Button for Mobile -->
@@ -187,10 +201,10 @@
             <a class="nav-link" href="../clientprofile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../viewadvocates">View Advocates</a>
+            <a class="nav-link" href="../viewadvocates">View Officers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../bookings">Advocate Bookings</a>
+            <a class="nav-link" href="../bookings">Bookings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../about">About</a>
@@ -227,66 +241,65 @@
       </div>
     </div>
   </nav>
-  
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <h1>Welcome to Justice-Link</h1>
-  <p>Bridging the gap between clients and advocates for a better tomorrow.</p>
-</section>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Welcome to Crime Reporting Platform</h1>
+    <p>Bridging the gap between clients and officers for a better tomorrow.</p>
+  </section>
 
-<!-- Mission and Vision Section -->
-<div class="container my-5">
-  <div class="section-title">
-    <h2>About Us</h2>
-    <p>Learn about our mission and vision.</p>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="content-box">
-        <h3>Our Mission</h3>
-        <p>To provide a seamless platform connecting clients with experienced advocates, ensuring equal access to justice for all.</p>
+  <!-- Mission and Vision Section -->
+  <div class="container my-5">
+    <div class="section-title">
+      <h2>About Us</h2>
+      <p>Learn about our mission and vision.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content-box">
+          <h3>Our Mission</h3>
+          <p>To provide a seamless platform connecting clients with experienced officers, ensuring equal access to justice for all.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content-box">
+          <h3>Our Vision</h3>
+          <p>We envision a world where legal assistance is a click away, fostering transparency, trust, and justice across communities.</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="content-box">
-        <h3>Our Vision</h3>
-        <p>We envision a world where legal assistance is a click away, fostering transparency, trust, and justice across communities.</p>
-      </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div class="container my-5">
+    <div class="section-title">
+      <h2>Why Crime Reporting Platform?</h2>
     </div>
+    <ul class="list-unstyled">
+      <li><i class="fas fa-check-circle"></i> Verified and Experienced officers</li>
+      <li><i class="fas fa-check-circle"></i> User-Friendly Interface</li>
+      <li><i class="fas fa-check-circle"></i> Secure Communication Channels</li>
+      <li><i class="fas fa-check-circle"></i> Comprehensive Legal Support</li>
+    </ul>
   </div>
-</div>
 
-<!-- Why Choose Us Section -->
-<div class="container my-5">
-  <div class="section-title">
-    <h2>Why Choose Justice-Link?</h2>
+  <!-- Call-to-Action Section -->
+  <div class="cta-section">
+    <h4>Ready to get started?</h4>
+    <a href="../viewadvocates" class="btn btn-warning btn-lg">Find an Officer Now</a>
   </div>
-  <ul class="list-unstyled">
-    <li><i class="fas fa-check-circle"></i> Verified and Experienced Advocates</li>
-    <li><i class="fas fa-check-circle"></i> User-Friendly Interface</li>
-    <li><i class="fas fa-check-circle"></i> Secure Communication Channels</li>
-    <li><i class="fas fa-check-circle"></i> Comprehensive Legal Support</li>
-  </ul>
-</div>
 
-<!-- Call-to-Action Section -->
-<div class="cta-section">
-  <h4>Ready to get started?</h4>
-  <a href="../viewadvocates" class="btn btn-warning btn-lg">Find an Advocate Now</a>
-</div>
-
-<!-- Footer -->
-<footer class="text-center py-4">
-  <div class="container">
-    <p>© 2024 Justice-Link. All Rights Reserved.</p>
-    <p>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
-    </p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>© 2024 Crime Reporting. All Rights Reserved.</p>
+      <p>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>

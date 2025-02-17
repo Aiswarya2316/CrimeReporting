@@ -12,122 +12,118 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-image: url('static/legal-law-concept-image-scales-justice-golden-light-legal-law-concept-image-scales-justice-golden-light-background-116766827.webp');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: white;
-      margin: 0;
+      background-color: #f5f7fa; /* Soft background color */
+      color: #495057; /* Darker text color for readability */
+      padding-top: 80px; /* Adjusted for navbar */
     }
-   /* Navbar */
-.navbar {
-  background-color: #212529; /* Dark background */
-  font-family: 'Arial', sans-serif;
-}
 
-/* Navigation Links */
-.navbar .nav-link {
-  color: #ffffff; /* White text */
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
+    /* Navbar */
+    .navbar {
+      background-color: #343a40; /* Dark navbar */
+    }
 
-.navbar .nav-link:hover {
-  color: #ffffff; /* Keep the text white on hover */
-}
+    .navbar .nav-link {
+      color: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
 
-.navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #ffcc00; /* Yellow glow effect */
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease-in-out;
-}
+    .navbar .nav-link:hover {
+      color: #ffcc00; /* Subtle yellow hover effect */
+    }
 
-.navbar .nav-link:hover::after {
-  width: 100%; /* Full underline on hover */
-}
+    .navbar .nav-item i {
+      font-size: 1.2rem;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
 
-/* Social Media Icons */
-.navbar .nav-item i {
-  font-size: 1.2rem;
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
+    .navbar .nav-item i:hover {
+      color: #ffcc00; /* Yellow hover effect */
+    }
 
-.navbar .nav-item i:hover {
-  color: #ffcc00; /* Yellow glow on hover */
-}
-
-.navbar .nav-item a:hover {
-  color: #ffcc00; /* Yellow glow on hover */
-}
-/* Search Form */
-.navbar .form-control {
-  border-radius: 20px;
-  padding: 8px 16px;
-  transition: box-shadow 0.3s ease;
-}
-
-.navbar .form-control:focus {
-  box-shadow: 0 0 8px #ffcc00;
-  border: 1px solid #ffcc00;
-}
+    /* Profile Card */
     .card {
       border: none;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       overflow: hidden;
+      background: white;
+      max-width: 400px;
+      margin-top: 40px;
     }
+
     .card-img-top {
-      border-bottom: 1px solid #202020;
-      width: 200px;
-      height: 200px;
-      justify-content: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: -90px;
+      border: 5px solid #ffcc00; /* Gold border */
     }
+
     .card-body {
+      padding: 25px;
       text-align: center;
-      padding: 30px 20px;
     }
+
     .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #333;
     }
+
     .card-text {
-      font-size: 1rem;
-      margin-bottom: 10px;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #555;
     }
+
     .card-text i {
-      color: #7DC855;
-      margin-right: 8px;
+      color: #ffcc00;
+      margin-right: 10px;
     }
+
+    /* Button Styles */
     .cart-btn {
       display: inline-block;
-      background-color: #7DC855;
+      background-color: #ffcc00;
       border-radius: 5px;
       font-size: 16px;
       color: #201f1f;
       text-decoration: none;
       padding: 12px 30px;
+      margin-top: 20px;
       transition: background-color 0.3s;
+      border: 2px solid #ffcc00;
     }
+
     .cart-btn:hover {
-      background-color: #64af3d;
+      background-color: #e6b800;
+      color: #ffffff;
+    }
+
+    /* Container */
+    .container {
+      max-width: 550px;
+    }
+
+    /* Navbar fixed on top */
+    .navbar-fixed-top {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid">
     <!-- Logo -->
     <a href="../clienthome" class="logo d-flex align-items-center">
-      <img src="static/1000_F_153564985_MLVK4XbezrFZnuAg5mlncjcQp82GaNcn.jpg" class="rounded-circle me-2" alt="logo" width="50px">
-      <!-- <span class="fw-bold text-white">AdvocateBooking</span> -->
+      <img src="../static/channels4_profile.jpg" class="rounded-circle me-2" alt="logo" width="50px">
     </a>
 
     <!-- Toggler Button for Mobile -->
@@ -142,10 +138,10 @@
           <a class="nav-link" href="../clientprofile">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../viewadvocates">View Advocates</a>
+          <a class="nav-link" href="../viewadvocates">View Officers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../bookings">Advocate Bookings</a>
+          <a class="nav-link" href="../bookings">Bookings</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../about">About</a>
@@ -173,32 +169,25 @@
           </a>
         </li>
       </ul>
-
-      <!-- Search Form -->
-      <form class="d-flex">
-        <input class="form-control me-2 border-warning" type="text" placeholder="Search">
-        <button class="btn btn-warning" type="button">Search</button>
-      </form>
     </div>
   </div>
 </nav>
 
 <!-- User Profile Card -->
-<div class="container mt-5 d-flex justify-content-center">
-  <div class="card" style="width: 350px;">
-    <div class="d-flex justify-content-center mt-4">
-      <img class="card-img-top rounded-circle" src="../static/user_logo.webp" alt="Profile Image">
+<div class="container mt-5 pt-5 d-flex justify-content-center">
+  <div class="card">
+    <div class="card-img-top d-flex justify-content-center">
+      <img class="rounded-circle" src="../static/user_logo.webp" alt="Profile Image"  style="width:120px;" >
     </div>
     <div class="card-body">
-      <h4 class="card-title">Name: {{data.username}}</h4>
-      <p class="card-text"><i class="fas fa-envelope"></i>Email: {{data.Email}}</p>
-      <p class="card-text"><i class="fas fa-phone"></i>Phone: {{data.phonenumber}}</p>
-      <p class="card-text"><i class="fas fa-map-marker-alt"></i>Location: {{data.location}}</p>
+      <h4 class="card-title">{{data.username}}</h4>
+      <p class="card-text"><i class="fas fa-envelope"></i>{{data.Email}}</p>
+      <p class="card-text"><i class="fas fa-phone"></i>{{data.phonenumber}}</p>
+      <p class="card-text"><i class="fas fa-map-marker-alt"></i>{{data.location}}</p>
       <a href="../updateclientprofile" class="cart-btn">Update Profile</a>
     </div>
   </div>
 </div>
-
 
 </body>
 </html>
