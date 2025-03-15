@@ -16,7 +16,7 @@ path('viewadvocates',views.viewadvocates),
 path('viewclients',views.viewclients),
 path('filecase/<int:id>', views.filecase, name='filecase'),
 path('viewcases/', views.viewcases, name='viewcases'),
-path('bookings',views.bookings),
+path('bookings/',views.bookings),
 path('bookinghistory/',views.bookinghistory),
 
 

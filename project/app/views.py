@@ -269,8 +269,19 @@ def viewcases(req):
 
 
 def bookings(req):
-        cases = Case.objects.all()
-        return render(req,'Client/bookings.html',{'cases':cases})
+    if 'user' in req.session:
+        client_email = req.session['user']
+        try:
+            client = Client.objects.get(Email=client_email)
+            cases = Case.objects.filter(client=client)  # Assuming Case has a ForeignKey to Client
+            return render(req, 'Client/bookings.html', {'cases': cases})
+        except Client.DoesNotExist:
+            messages.warning(req, "Client not found!")
+            return redirect(login)
+    else:
+        messages.warning(req, "Please log in first!")
+        return redirect(login)
+
 
 
 
